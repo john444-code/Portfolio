@@ -52,6 +52,16 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .nav-links {
@@ -449,9 +459,26 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .navbar .container {
+        padding: 0.8rem 20px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .logo-photo {
+        width: 35px;
+        height: 35px;
+    }
+
     .nav-links {
         gap: 1rem;
         font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 80px 20px;
     }
 
     .hero-content h1 {
@@ -462,8 +489,13 @@ body {
         font-size: 1.1rem;
     }
 
+    .about {
+        padding: 60px 20px;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .about-stats {
@@ -477,8 +509,37 @@ body {
         border-top: 4px solid var(--primary-color);
     }
 
+    .projects {
+        padding: 60px 20px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .skills {
+        padding: 60px 20px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .contact {
+        padding: 60px 20px;
+    }
+
     .contact-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-form {
+        padding: 2rem;
+    }
+
+    .contact-info {
+        padding: 2rem;
     }
 
     .social-links {
@@ -494,28 +555,164 @@ body {
     .skills h2,
     .contact h2 {
         font-size: 2rem;
+        margin-bottom: 2rem;
     }
 }
 
 @media (max-width: 480px) {
+    .navbar .container {
+        padding: 0.7rem 15px;
+    }
+
+    .logo {
+        font-size: 1rem;
+        gap: 0.5rem;
+    }
+
+    .logo-photo {
+        width: 30px;
+        height: 30px;
+    }
+
     .nav-links {
         gap: 0.5rem;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    .hero {
+        padding: 60px 15px;
     }
 
     .hero-content h1 {
         font-size: 1.5rem;
+        margin-bottom: 0.8rem;
     }
 
-    .hero {
-        padding: 60px 20px;
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+
+    .about {
+        padding: 40px 15px;
+    }
+
+    .about h2,
+    .projects h2,
+    .skills h2,
+    .contact h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.3rem;
+        margin: 1rem 1rem 0.8rem;
+    }
+
+    .project-card p {
+        margin: 0 1rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .project-tech {
+        margin: 0 1rem 1rem;
+    }
+
+    .project-tech span {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    .project-link {
+        margin: 0 1rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .skills {
+        padding: 40px 15px;
     }
 
     .skills-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .skill-category {
+        padding: 1.5rem;
+    }
+
+    .skill-category h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .skill-category li {
+        padding: 0.6rem 0;
+        font-size: 0.9rem;
+    }
+
+    .contact {
+        padding: 40px 15px;
+    }
+
+    .contact-intro {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-content {
+        gap: 1.5rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .contact-info {
+        padding: 1.5rem;
+    }
+
+    .contact-item {
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .submit-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .social-link {
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding: 1.5rem 15px;
+        font-size: 0.9rem;
     }
 }
