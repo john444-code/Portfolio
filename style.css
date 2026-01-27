@@ -154,6 +154,10 @@ body {
     align-items: center;
 }
 
+.about-text {
+    text-align: center;
+}
+
 .about-text p {
     font-size: 1.1rem;
     color: var(--text-light);
