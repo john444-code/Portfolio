@@ -846,3 +846,149 @@ body {
         font-size: 0.8rem;
     }
 }
+
+/* JavaScript-enhanced styles */
+
+/* Mobile menu styles */
+.mobile-menu-toggle {
+    display: none;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+}
+
+.mobile-menu.mobile-menu-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu .nav-links {
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+}
+
+.mobile-menu .nav-links li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.mobile-menu .nav-links li:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu .nav-links a {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+}
+
+/* Form validation styles */
+.form-errors {
+    background-color: #fee;
+    border: 1px solid #fcc;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-errors ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.form-errors li {
+    color: #c33;
+    margin-bottom: 0.5rem;
+}
+
+.form-errors li:last-child {
+    margin-bottom: 0;
+}
+
+.form-success {
+    background-color: #efe;
+    border: 1px solid #cfc;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: #363;
+}
+
+/* Scroll animation styles */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.project-card.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.back-to-top:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Typing animation for hero subtitle */
+.hero-subtitle {
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink-caret 1s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+}
